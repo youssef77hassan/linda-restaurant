@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linda — Lebanese Restaurant</title>
+  <meta name="description"
+    content="Linda Lebanese Restaurant — fresh ingredients, traditional recipes and unforgettable Lebanese dishes, cooked fresh every day.">
+  <meta name="theme-color" content="#2563eb">
+
+  <!-- Open Graph tags help the link preview look good when the site is shared -->
+  <meta property="og:title" content="Linda — Lebanese Restaurant">
+  <meta property="og:description" content="Authentic Lebanese food, made with love.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/optimized/hero-1400.jpg">
+
+  <!-- Cedar mark used as the browser tab icon (inline SVG, no extra file needed) -->
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 36'%3E%3Cg fill='%232563eb'%3E%3Cpath d='M16 3.2c-3.6 0-6.4 2.2-7.2 5.2h14.4c-.8-3-3.6-5.2-7.2-5.2Z'/%3E%3Cpath d='M16 10.6c-5.1 0-9 2.6-10.2 6.1h20.4c-1.2-3.5-5.1-6.1-10.2-6.1Z'/%3E%3Cpath d='M16 18.4c-6.7 0-11.6 3.1-12.8 7.2h25.6c-1.2-4.1-6.1-7.2-12.8-7.2Z'/%3E%3Cpath d='M14.8 24.6h2.4V32h-2.4z'/%3E%3C/g%3E%3C/svg%3E">
+
+  <!-- Fonts: Poppins for text (the original choice), Bodoni Moda for elegant headings -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600;6..96,700&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Adds the .js class before the page paints so reveal animations do not flash.
+       If script.js fails to load, the class is removed again and all content shows. -->
+  <script>
+    document.documentElement.classList.add("js");
+    setTimeout(function () {
+      if (!window.__lindaReady) document.documentElement.classList.remove("js");
+    }, 2500);
+  </script>
+</head>
+
+<body>
+
+  <!-- Reusable SVG symbols (the cedar is the brand motif) -->
+  <svg class="svg-sprite" aria-hidden="true" focusable="false" width="0" height="0">
+    <symbol id="cedar" viewBox="0 0 32 36">
+      <path d="M16 3.2c-3.6 0-6.4 2.2-7.2 5.2h14.4c-.8-3-3.6-5.2-7.2-5.2Z" />
+      <path d="M16 10.6c-5.1 0-9 2.6-10.2 6.1h20.4c-1.2-3.5-5.1-6.1-10.2-6.1Z" />
+      <path d="M16 18.4c-6.7 0-11.6 3.1-12.8 7.2h25.6c-1.2-4.1-6.1-7.2-12.8-7.2Z" />
+      <path d="M14.8 24.6h2.4V32h-2.4z" />
+    </symbol>
+    <symbol id="close" viewBox="0 0 24 24">
+      <path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.8"
+        stroke-linecap="round" />
+    </symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a class="logo" href="#home" aria-label="Linda Restaurant — home">
+        <svg class="icon brand-mark" aria-hidden="true"><use href="#cedar" /></svg>
+        <span class="logo-text">Linda<span class="logo-dot">.</span></span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"
+        aria-label="Open menu">
+        <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Main">
+        <ul>
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#menu" class="nav-link">Menu</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-panel">
+
+          <div class="hero-text">
+            <p class="eyebrow reveal" style="--i:0">
+              <span class="eyebrow-line" aria-hidden="true"></span>
+              Welcome to Linda Restaurant
+            </p>
+
+            <h1 class="reveal" style="--i:1">Authentic Lebanese food, made with love</h1>
+
+            <p class="desc reveal" style="--i:2">
+              Fresh ingredients, traditional recipes, and unforgettable mezze — cooked fresh every day
+              and served the way we eat at home.
+            </p>
+
+            <div class="hero-actions reveal" style="--i:3">
+              <a href="#menu" class="btn btn-primary">View Our Menu</a>
+              <a href="#contact" class="btn btn-ghost">Contact Us</a>
+            </div>
+          </div>
+
+          <figure class="hero-media reveal" style="--i:2">
+            <img src="images/optimized/hero-1400.jpg"
+              srcset="images/optimized/hero-800.jpg 800w, images/optimized/hero-1400.jpg 1400w"
+              sizes="(min-width: 900px) 46vw, 92vw" width="1400" height="933"
+              alt="Golden fried kibbeh served on a platter with labneh and parsley" fetchpriority="high"
+              decoding="async">
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MENU / DISHES ============ -->
+    <section class="menu" id="menu">
+      <div class="container container--wide">
+
+        <h2 class="section-title reveal">Our Signature Dishes</h2>
+        <p class="section-sub reveal" style="--i:1">Six Lebanese favorites, cooked fresh every day</p>
+
+        <div class="dishes-grid">
+
+          <!-- 1 — Chicken Shawarma -->
+          <article class="dish-card reveal" style="--i:0" data-name="Chicken Shawarma"
+            data-price="$9" data-img="images/optimized/shawarma-1100.jpg"
+            data-desc="Marinated chicken, garlic toum, and pickles wrapped in warm pita.">
+            <div class="dish-media">
+              <img src="images/optimized/shawarma-550.jpg"
+                srcset="images/optimized/shawarma-550.jpg 550w, images/optimized/shawarma-1100.jpg 1100w"
+                sizes="(min-width: 1000px) 32vw, (min-width: 640px) 46vw, 92vw" width="550" height="550"
+                alt="Chicken shawarma wrap with garlic toum and pickles" loading="lazy" decoding="async">
+            </div>
+            <div class="dish-body">
+              <h3>Chicken Shawarma</h3>
+              <p class="dish-desc">Marinated chicken, garlic toum, and pickles wrapped in warm pita.</p>
+              <div class="dish-actions">
+                <span class="price">$9</span>
+                <button class="dish-open" type="button">View details</button>
+              </div>
+            </div>
+            <div class="dish-veil" aria-hidden="true">
+              <p class="veil-name">Chicken Shawarma</p>
+              <p class="veil-desc">Marinated chicken, garlic toum, and pickles wrapped in warm pita.</p>
+              <span class="veil-price">$9</span>
+            </div>
+          </article>
+
+          <!-- 2 — Kibbeh -->
+          <article class="dish-card reveal" style="--i:1" data-name="Kibbeh" data-price="$11"
+            data-img="images/optimized/kibbeh-1100.jpg"
+            data-desc="Crispy bulgur shells filled with spiced meat and pine nuts.">
+            <div class="dish-media">
+              <img src="images/optimized/kibbeh-550.jpg"
+                srcset="images/optimized/kibbeh-550.jpg 550w, images/optimized/kibbeh-1100.jpg 1100w"
+                sizes="(min-width: 1000px) 32vw, (min-width: 640px) 46vw, 92vw" width="550" height="550"
+                alt="Golden fried kibbeh shells on a plate" loading="lazy" decoding="async">
+            </div>
+            <div class="dish-body">
+              <h3>Kibbeh</h3>
+              <p class="dish-desc">Crispy bulgur shells filled with spiced meat and pine nuts.</p>
+              <div class="dish-actions">
+                <span class="price">$11</span>
+                <button class="dish-open" type="button">View details</button>
+              </div>
+            </div>
+            <div class="dish-veil" aria-hidden="true">
+              <p class="veil-name">Kibbeh</p>
+              <p class="veil-desc">Crispy bulgur shells filled with spiced meat and pine nuts.</p>
+              <span class="veil-price">$11</span>
+            </div>
+          </article>
+
+          <!-- 3 — Hummus -->
+          <article class="dish-card reveal" style="--i:2" data-name="Hummus" data-price="$7"
+            data-img="images/optimized/hummus-1100.jpg"
+            data-desc="Creamy chickpea and tahini dip with olive oil and warm pita.">
+            <div class="dish-media">
+              <img src="images/optimized/hummus-550.jpg"
+                srcset="images/optimized/hummus-550.jpg 550w, images/optimized/hummus-1100.jpg 1100w"
+                sizes="(min-width: 1000px) 32vw, (min-width: 640px) 46vw, 92vw" width="550" height="366"
+                alt="Hummus topped with olive oil, served with warm pita" loading="lazy" decoding="async">
+            </div>
+            <div class="dish-body">
+              <h3>Hummus</h3>
+              <p class="dish-desc">Creamy chickpea and tahini dip with olive oil and warm pita.</p>
+              <div class="dish-actions">
+                <span class="price">$7</span>
+                <button class="dish-open" type="button">View details</button>
+              </div>
+            </div>
+            <div class="dish-veil" aria-hidden="true">
+              <p class="veil-name">Hummus</p>
+              <p class="veil-desc">Creamy chickpea and tahini dip with olive oil and warm pita.</p>
+              <span class="veil-price">$7</span>
+            </div>
+          </article>
+
+          <!-- 4 — Tabbouleh -->
+          <article class="dish-card reveal" style="--i:3" data-name="Tabbouleh" data-price="$8"
+            data-img="images/optimized/tabbouleh-1100.jpg"
+            data-desc="Fresh parsley, tomato, mint, and bulgur with a lemon dressing.">
+            <div class="dish-media">
+              <img src="images/optimized/tabbouleh-550.jpg"
+                srcset="images/optimized/tabbouleh-550.jpg 550w, images/optimized/tabbouleh-1100.jpg 1100w"
+                sizes="(min-width: 1000px) 32vw, (min-width: 640px) 46vw, 92vw" width="550" height="366"
+                alt="Tabbouleh salad with parsley, tomato and mint" loading="lazy" decoding="async">
+            </div>
+            <div class="dish-body">
+              <h3>Tabbouleh</h3>
+              <p class="dish-desc">Fresh parsley, tomato, mint, and bulgur with a lemon dressing.</p>
+              <div class="dish-actions">
+                <span class="price">$8</span>
+                <button class="dish-open" type="button">View details</button>
+              </div>
+            </div>
+            <div class="dish-veil" aria-hidden="true">
+              <p class="veil-name">Tabbouleh</p>
+              <p class="veil-desc">Fresh parsley, tomato, mint, and bulgur with a lemon dressing.</p>
+              <span class="veil-price">$8</span>
+            </div>
+          </article>
+
+          <!-- 5 — Mixed Grill -->
+          <article class="dish-card reveal" style="--i:4" data-name="Mixed Grill" data-price="$18"
+            data-img="images/optimized/mixed-grill-1100.jpg"
+            data-desc="Charcoal-grilled chicken and kofta skewers with rice and vegetables.">
+            <div class="dish-media">
+              <img src="images/optimized/mixed-grill-550.jpg"
+                srcset="images/optimized/mixed-grill-550.jpg 550w, images/optimized/mixed-grill-1100.jpg 1100w"
+                sizes="(min-width: 1000px) 32vw, (min-width: 640px) 46vw, 92vw" width="550" height="366"
+                alt="Mixed grill platter with chicken and kofta skewers" loading="lazy" decoding="async">
+            </div>
+            <div class="dish-body">
+              <h3>Mixed Grill</h3>
+              <p class="dish-desc">Charcoal-grilled chicken and kofta skewers with rice and vegetables.</p>
+              <div class="dish-actions">
+                <span class="price">$18</span>
+                <button class="dish-open" type="button">View details</button>
+              </div>
+            </div>
+            <div class="dish-veil" aria-hidden="true">
+              <p class="veil-name">Mixed Grill</p>
+              <p class="veil-desc">Charcoal-grilled chicken and kofta skewers with rice and vegetables.</p>
+              <span class="veil-price">$18</span>
+            </div>
+          </article>
+
+          <!-- 6 — Cheese Manakish -->
+          <article class="dish-card reveal" style="--i:5" data-name="Cheese Manakish"
+            data-price="$6" data-img="images/optimized/cheese-manakish-1100.jpg"
+            data-desc="Baked flatbread topped with melted cheese and sesame.">
+            <div class="dish-media">
+              <img src="images/optimized/cheese-manakish-550.jpg"
+                srcset="images/optimized/cheese-manakish-550.jpg 550w, images/optimized/cheese-manakish-1100.jpg 1100w"
+                sizes="(min-width: 1000px) 32vw, (min-width: 640px) 46vw, 92vw" width="550" height="733"
+                alt="Cheese manakish flatbread with sesame on top" loading="lazy" decoding="async">
+            </div>
+            <div class="dish-body">
+              <h3>Cheese Manakish</h3>
+              <p class="dish-desc">Baked flatbread topped with melted cheese and sesame.</p>
+              <div class="dish-actions">
+                <span class="price">$6</span>
+                <button class="dish-open" type="button">View details</button>
+              </div>
+            </div>
+            <div class="dish-veil" aria-hidden="true">
+              <p class="veil-name">Cheese Manakish</p>
+              <p class="veil-desc">Baked flatbread topped with melted cheese and sesame.</p>
+              <span class="veil-price">$6</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="about-panel">
+
+          <figure class="about-media reveal">
+            <img src="images/optimized/about-1000.jpg"
+              srcset="images/optimized/about-600.jpg 600w, images/optimized/about-1000.jpg 1000w"
+              sizes="(min-width: 900px) 40vw, 92vw" width="1000" height="1250"
+              alt="A spread of Lebanese mezze dishes served at Linda Restaurant" loading="lazy"
+              decoding="async">
+          </figure>
+
+          <div class="about-text">
+            <p class="eyebrow reveal"><span class="eyebrow-line" aria-hidden="true"></span>About Us</p>
+            <h2 class="reveal" style="--i:1">Lebanese taste brings people together</h2>
+            <p class="desc reveal" style="--i:2">
+              We believe that great food creates happy moments. We cook traditional Lebanese recipes
+              with fresh ingredients, for everyone at the table.
+            </p>
+
+            <ul class="about-list reveal" style="--i:3">
+              <li><svg class="icon" aria-hidden="true"><use href="#cedar" /></svg>Traditional recipes</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#cedar" /></svg>Fresh ingredients</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#cedar" /></svg>Made with love</li>
+            </ul>
+
+            <div class="reveal" style="--i:4">
+              <a href="#menu" class="btn btn-primary">See the menu</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="contact-box">
+
+          <p class="eyebrow eyebrow--center reveal">Get in touch</p>
+          <h2 class="reveal" style="--i:1">Contact Us</h2>
+          <p class="contact-desc reveal" style="--i:2">We'd love to hear from you. Send us a message!</p>
+
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Enter your full name"
+                autocomplete="name" aria-describedby="name-error" required>
+              <p class="field-error" id="name-error"></p>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email address"
+                autocomplete="email" aria-describedby="email-error" required>
+              <p class="field-error" id="email-error"></p>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" placeholder="Write your message here..." rows="5"
+                aria-describedby="message-error" required></textarea>
+              <p class="field-error" id="message-error"></p>
+            </div>
+
+            <button type="submit" class="send-btn">Send Message</button>
+
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+
+            <p class="demo-note">
+              <strong>Demo form.</strong> This page has no server yet, so messages are not delivered.
+              Please email <a href="mailto:lindalebaneseR@gmail.com">lindalebaneseR@gmail.com</a> instead.
+            </p>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+
+        <div class="footer-about">
+          <a class="logo logo--footer" href="#home" aria-label="Linda Restaurant — home">
+            <svg class="icon brand-mark" aria-hidden="true"><use href="#cedar" /></svg>
+            <span class="logo-text">Linda<span class="logo-dot">.</span></span>
+          </a>
+          <p>Authentic Lebanese food, made with love.</p>
+        </div>
+
+        <nav class="footer-links" aria-label="Footer">
+          <h3>Quick Links</h3>
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#menu" class="nav-link">Menu</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="footer-contact">
+          <h3>Get in Touch</h3>
+          <p>Lebanon</p>
+          <p><a href="mailto:lindalebaneseR@gmail.com">lindalebaneseR@gmail.com</a></p>
+          <p><a href="tel:0378890">03 788 90</a></p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> Linda Restaurant. All rights reserved.</p>
+        <a href="#home" class="to-top">Back to top</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ DISH MODAL ============ -->
+  <dialog class="dish-modal" id="dish-modal" aria-labelledby="dish-modal-title">
+    <div class="modal-panel">
+
+      <button class="modal-close" type="button" id="modal-close" aria-label="Close dish details">
+        <svg class="icon" aria-hidden="true"><use href="#close" /></svg>
+      </button>
+
+      <div class="modal-media">
+        <img id="dish-modal-img" src="images/optimized/shawarma-1100.jpg" width="1100" height="825" alt=""
+          decoding="async">
+      </div>
+
+      <div class="modal-content">
+        <p class="modal-kicker">From our menu</p>
+        <div class="modal-heading">
+          <h2 id="dish-modal-title">Dish</h2>
+          <span class="modal-price" id="dish-modal-price">$0</span>
+        </div>
+        <p class="modal-desc" id="dish-modal-desc"></p>
+
+        <div class="modal-actions">
+          <button class="btn btn-primary" type="button" id="modal-ask">Ask about this dish</button>
+          <button class="btn btn-ghost" type="button" id="modal-back">Back to menu</button>
+        </div>
+
+        <p class="modal-note">
+          Information shown here comes from our menu. Ask us about ingredients and allergies before ordering.
+        </p>
+      </div>
+
+    </div>
+  </dialog>
+
+  <!-- Custom cursor (desktop pointer devices only, added by script.js) -->
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <div class="cursor-ring"></div>
+    <svg class="cursor-mark icon" aria-hidden="true"><use href="#cedar" /></svg>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+
+</html>
